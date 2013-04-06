@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">spr_cloud</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1000</param>
+                    <param id="3" name="Y">random(768)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" type="spr_cloud">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">Sprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1000</param>
+                    <param id="3" name="Y">random(768)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" type="Sprite">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="spr_cloud" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" type="spr_cloud">
+                    <param id="0" name="Speed">random(200) + 200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" type="plane" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" type="plane">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On click" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" type="plane">
+                    <param id="0" name="Object">spr_bullet</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" type="plane">
+                    <param id="0" name="Object">par_propulsion</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="par_propulsion" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" type="par_propulsion">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">par_propulsion.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">random(3) +5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">spr_build</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">1024</param>
+                    <param id="3" name="Y">700</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="spr_build" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" type="spr_build">
+                    <param id="0" name="Speed">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" type="System">
+                    <param id="0" name="Object to create">spr_enemy</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="X">1024</param>
+                    <param id="3" name="Y">random(768)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="spr_enemy" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" type="spr_enemy">
+                    <param id="0" name="X">512</param>
+                    <param id="1" name="Y">random(768)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" type="spr_enemy" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" type="spr_enemy" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" type="spr_enemy" />
+                <condition id="-7" name="Compare instance variable" type="spr_enemy">
+                    <param id="0" name="Instance variable">Entra</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="spr_enemy" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" type="spr_enemy" />
+                <condition id="-7" name="Compare instance variable" type="spr_enemy">
+                    <param id="0" name="Instance variable">Entra</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" type="spr_enemy">
+                    <param id="0" name="X">2000</param>
+                    <param id="1" name="Y">2000</param>
+                </action>
+                <action id="-10" name="Set value" type="spr_enemy">
+                    <param id="0" name="Instance variable">Entra</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Pathfinding" id="4" name="Is moving along path" type="spr_enemy" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" type="spr_enemy">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="spr_bullet">
+                    <param id="0" name="Object">spr_enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" type="spr_enemy">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Destroy" type="spr_bullet" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+                <condition id="-11" name="For Each" type="System">
+                    <param id="0" name="Object">spr_enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" type="spr_enemy">
+                    <param id="0" name="Object">spr_enemybullet</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="spr_enemybullet" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" type="spr_enemybullet">
+                    <param id="0" name="X">plane.X</param>
+                    <param id="1" name="Y">plane.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="plane">
+                    <param id="0" name="Instance variable">misiles</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On click" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="plane">
+                    <param id="0" name="Instance variable">misiles</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" type="plane">
+                    <param id="0" name="Object">spr_misiles</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-12" name="Subtract from" type="plane">
+                    <param id="0" name="Instance variable">misiles</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-18" name="On created" type="spr_misiles" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" type="spr_misiles">
+                    <param id="0" name="X">spr_enemy.X</param>
+                    <param id="1" name="Y">spr_enemy.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">0.25</param>
+                </condition>
+                <condition id="-11" name="For Each" type="System">
+                    <param id="0" name="Object">spr_misiles</param>
+                </condition>
+                <condition id="-15" name="Pick nearest/furthest" type="spr_enemy">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">spr_misiles.X</param>
+                    <param id="2" name="Y">spr_misiles.Y</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" type="spr_misiles">
+                    <param id="0" name="X">spr_enemy.X</param>
+                    <param id="1" name="Y">spr_enemy.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="spr_misiles">
+                    <param id="0" name="Object">spr_enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="spr_misiles" />
+                <action id="-12" name="Subtract from" type="spr_enemy">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="spr_enemy">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="spr_enemy" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="spr_enemybullet">
+                    <param id="0" name="Object">plane</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" type="plane">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Destroy" type="spr_enemybullet" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="plane">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="plane" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
