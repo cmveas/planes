@@ -3,8 +3,8 @@
     <name>Layout 1</name>
     <event-sheet>Event sheet 1</event-sheet>
     <size>
-        <width>1280</width>
-        <height>1024</height>
+        <width>1920</width>
+        <height>1080</height>
     </size>
     <margins>
         <horizontal>100</horizontal>
@@ -34,11 +34,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-8</x>
-                        <y>1</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
-                        <width>1036</width>
-                        <height>772</height>
+                        <width>1920</width>
+                        <height>1080</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -55,7 +55,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>0</speed>
+                                <speed>-50</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -66,15 +66,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-129</x>
-                        <y>633</y>
+                        <x>-384</x>
+                        <y>782</y>
                         <z>0</z>
-                        <width>251</width>
-                        <height>253</height>
+                        <width>722</width>
+                        <height>239</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-3.129170179</angle>
+                        <hotspotX>0.512465358</hotspotX>
+                        <hotspotY>0.497907937</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -104,7 +104,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>200</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -118,11 +118,11 @@
                         <x>1149</x>
                         <y>110</y>
                         <z>0</z>
-                        <width>148</width>
-                        <height>121</height>
+                        <width>604</width>
+                        <height>215</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.497674406</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -165,18 +165,23 @@
                                 <default-controls>Yes</default-controls>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>85</x>
-                        <y>264</y>
+                        <x>150</x>
+                        <y>540</y>
                         <z>0</z>
-                        <width>79</width>
-                        <height>47</height>
+                        <width>190</width>
+                        <height>111</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.504132211</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -204,11 +209,11 @@
                         <x>1132</x>
                         <y>278</y>
                         <z>0</z>
-                        <width>31</width>
-                        <height>39</height>
+                        <width>33</width>
+                        <height>33</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.515151501</hotspotX>
+                        <hotspotY>0.515151501</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -216,11 +221,11 @@
                 <instance type="par_propulsion">
                     <properties>
                         <rate>50</rate>
-                        <spray-cone>60</spray-cone>
+                        <spray-cone>160</spray-cone>
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>200</speed>
-                        <size>32</size>
+                        <size>25</size>
                         <opacity>100</opacity>
                         <grow-rate>0</grow-rate>
                         <x-randomiser>0</x-randomiser>
@@ -231,7 +236,7 @@
                         <particle-lifetime-properties></particle-lifetime-properties>
                         <acceleration>-150</acceleration>
                         <gravity>0</gravity>
-                        <angle-randomiser>0</angle-randomiser>
+                        <angle-randomiser>45</angle-randomiser>
                         <speed-randomiser>800</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
                         <destroy-mode>Fade to invisible</destroy-mode>
@@ -253,8 +258,8 @@
                         <x>79</x>
                         <y>352.5</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>13</height>
+                        <width>25</width>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -302,8 +307,72 @@
                         <x>1150</x>
                         <y>366.5</y>
                         <z>0</z>
-                        <width>166</width>
-                        <height>145</height>
+                        <width>380</width>
+                        <height>215</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497674406</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_enemybullet">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1196</x>
+                        <y>566</y>
+                        <z>0</z>
+                        <width>33</width>
+                        <height>33</height>
+                        <depth>0</depth>
+                        <hotspotX>0.515151501</hotspotX>
+                        <hotspotY>0.515151501</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="spr_misiles">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>200</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1187.5</x>
+                        <y>787</y>
+                        <z>0</z>
+                        <width>76</width>
+                        <height>52</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -338,116 +407,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1205</x>
-                        <y>688</y>
+                        <x>1077</x>
+                        <y>552</y>
                         <z>0</z>
-                        <width>309</width>
-                        <height>99</height>
+                        <width>358</width>
+                        <height>146</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spr_enemybullet">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>400</speed>
-                                <acceleration>0</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1196</x>
-                        <y>566</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="spr_misiles">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>200</speed>
-                                <acceleration>200</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1187.5</x>
-                        <y>787</y>
-                        <z>0</z>
-                        <width>28</width>
-                        <height>17</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Particles2">
-                    <properties>
-                        <rate>50</rate>
-                        <spray-cone>60</spray-cone>
-                        <type>Continuous spray</type>
-                        <initial-particle-properties></initial-particle-properties>
-                        <speed>200</speed>
-                        <size>32</size>
-                        <opacity>100</opacity>
-                        <grow-rate>0</grow-rate>
-                        <x-randomiser>0</x-randomiser>
-                        <y-randomiser>0</y-randomiser>
-                        <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
-                        <grow-rate-randomiser>0</grow-rate-randomiser>
-                        <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>-150</acceleration>
-                        <gravity>0</gravity>
-                        <angle-randomiser>0</angle-randomiser>
-                        <speed-randomiser>800</speed-randomiser>
-                        <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Fade to invisible</destroy-mode>
-                        <timeout>1</timeout>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>613</x>
-                        <y>847</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
